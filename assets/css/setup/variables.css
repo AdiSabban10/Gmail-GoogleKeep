@@ -1,0 +1,20 @@
+:root {
+    --main-bg-color: lightblue;
+
+    /* Keep App */
+    /* note background color options */
+    --coral: #faafa8;
+    --peach: #f39f76;
+    --sand: #fff8b8;
+    --mint: #e2f6d3;
+    --sage: #b4ddd3;
+    --fog: #d4e4ed;
+    --storm: #aeccdc;
+    --dusk: #d3bfdb;
+    --blossom: #f6e2dd;
+    --clay: #e9e3d4;
+    --chalk: #efeff1;
+
+    --icon: #595959;
+
+}

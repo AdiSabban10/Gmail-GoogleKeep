@@ -1,0 +1,45 @@
+.note-form {
+    font: Roboto;
+    display: grid;
+}
+
+.note-form img{
+    place-self: center;
+}
+.note-form button {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font: Roboto;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.note-form button:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.note-form form {
+    display: grid;
+    row-gap: 0.5em;
+}
+
+.note-form form input {
+    border: none;
+}
+
+.note-form form input:first-of-type{
+    font-size: 18px;
+}
+
+.note-form form textarea{
+    border: none;
+}
+
+.note-form form input:focus, .note-form form textarea:focus{
+    outline: none;
+}
+

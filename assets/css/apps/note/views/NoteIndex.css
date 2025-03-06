@@ -1,0 +1,47 @@
+.note-index {
+    color: #5f6368;
+    position: relative;
+}
+
+.note-index-header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 90px 150px 650px; 
+    align-items: center;
+    border-bottom: 2px solid lightgrey;
+    padding-block: 0.5em;
+    
+}
+
+.note-index-header img {
+    justify-self: end;
+}
+
+.note-index-header h1{
+    font-weight: 400;
+    
+}
+
+.note-index main {
+    display: grid;
+    grid-template-areas: "side-menu add-note"
+                            "side-menu note-list";
+    
+    grid-template-columns: min-content 1fr;
+}
+
+
+
+.note-index main .side-menu {
+    grid-area: side-menu;
+    /* max-width: 250px; */
+}
+
+.note-index main .add-note {
+    grid-area: add-note;
+}
+
+.note-index main .note-list {
+    grid-area: note-list;
+}
+

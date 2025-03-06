@@ -1,0 +1,17 @@
+.under-costruction img {
+    display: grid;
+    place-self: center;
+
+}
+
+.under-construction button {
+    place-self: end;
+    width: 50px;
+    background-color: var(--chalk);
+    border-radius: 8px;
+    border: none;
+    color: gray;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 0.7em;
+}

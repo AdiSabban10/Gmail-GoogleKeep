@@ -1,0 +1,27 @@
+.mail-details{
+    margin-inline: 30px;
+}
+
+
+.mail-details .subject {
+    font-size: 1.375em;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.mail-details .details {
+    font-size: 0.875em;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.mail-details .action-btn-details{
+    display: flex;
+    justify-content: space-between;
+}
+.mail-details .action-btn-status{
+    display: flex;
+    
+}

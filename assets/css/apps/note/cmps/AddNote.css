@@ -1,0 +1,64 @@
+.add-note {
+    position: relative;
+    margin-block-start: 1em;
+    max-width: 400px;
+    margin-inline: 0.5em;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.548);
+    padding: 0.5em;
+    border-radius: 8px;
+    height: max-content;
+    row-gap: 0.5em;
+}
+
+.add-note .note-pin {
+    right:0;
+    top:0;
+}
+
+.take-a-note {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    
+    
+}
+
+.take-a-note p{
+    display: grid;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.add-note .take-a-note .action-icons {
+    width: 170px;
+}
+
+.take-a-note .action-icons .email, .take-a-note .action-icons .color {
+    display:none;
+}
+
+.add-note .trash, .add-note .select, .add-note .duplicate {
+    display: none;
+}
+
+.add-note .action-icons {
+    width: 200px;
+}
+
+
+
+.add-note .take-a-note .note-video-add {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    height: max-content;
+    display:grid;  
+}
+.add-note .take-a-note .video-list {
+    grid-row: 2;
+}
+.add-note .take-a-note .search-video {
+    grid-row: 1;
+}
+
+
+

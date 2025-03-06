@@ -1,0 +1,57 @@
+.action-icon .add-img {
+    position: relative;
+}
+.note-img-add {
+    position: absolute;
+    bottom: -25px;
+    background-color: var(--blossom);
+    border-radius: 8px;
+    padding: 0.2em;
+    border: 1px solid gray;
+   
+    opacity: 1;
+    z-index: 3;
+    
+    
+}
+
+.note-img-add form {
+    display: grid;
+    width: max-content;
+    grid-auto-flow: column;
+    column-gap: 0.2em;
+}
+
+.note-img-add input {
+    border: none;
+    width: 150px;
+    background-color: var(--blossom);
+    z-index: 10;
+    
+}
+
+.note-img-add input:focus {
+   outline: none;
+}
+
+.note-img-add button{
+    justify-self: end;
+    width: 50px;
+    background-color: var(--chalk);
+    border-radius: 8px;
+    border: none;
+    color: gray;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 0.7em;
+    
+}
+
+.note-img-add form:last-child{
+    justify-self: end;
+    grid-column: 2;
+}
+
+.note-preview .action-icons .note-img-add {
+    opacity: 1;
+}

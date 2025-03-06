@@ -1,0 +1,83 @@
+ .mail-list {
+    background-color: #f2f6fc;
+    border-radius: 1em;
+    
+}
+
+.mail-list li {
+    box-shadow: rgba(100, 121, 143, 0.12) 0px -1px 0px 0px inset;
+    position: relative; 
+    
+}
+
+.mail-list li:hover .mail-action-btn {
+    opacity: 1;
+    cursor: pointer;
+} 
+
+.mail-list li .mail-action-btn {
+    display: flex;
+    justify-content: end;
+    opacity: 0;
+    transition: 500ms;
+    position: absolute; 
+    top: 50%; 
+    right: 1em; 
+    transform: translateY(-50%); 
+    z-index: 1; 
+    background-color: rgb(226, 238, 241);
+    padding: 0.3em; 
+}
+
+
+.mail-list li .mail-preview:hover {
+    background-color: rgb(226, 238, 241);
+    box-shadow: rgba(218, 220, 224) 1px 0px 0px 0px inset,
+        rgba(218, 220, 224) 1px 0px 0px 0px inset,
+        rgba(60, 64, 67, 0.3) 0px 1px 2px 0px inset,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px inset;
+   
+}
+
+.un-read {
+    background-color: white;
+    font-weight: bold;
+}
+
+.no-mails {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #202124;
+    font-size: 1.5em;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 920px){
+    .mail-list {
+        margin-inline: 10px;
+    }
+    .mail-list li .mail-action-btn {
+        display: none;
+    }
+
+}
+
+/* SMALL */
+@media (min-width: 640px){
+   
+    .mail-list li .mail-action-btn {
+        display: flex;
+    }
+}
+
+/* MEDIUM */
+@media (min-width: 920px){
+    
+
+}
+
+/* LARGE */
+@media (min-width: 1100px){
+    
+}

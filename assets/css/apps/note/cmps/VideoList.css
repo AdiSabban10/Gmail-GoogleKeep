@@ -1,0 +1,38 @@
+.video-list ul{
+    width: max-content;
+    display: grid;
+    row-gap: 0.2em;
+}
+
+.video-list ul li{
+    padding: 0;
+}
+
+.video-list ul li div {
+    display: grid;
+    
+
+    grid-auto-flow: column;
+    column-gap: 0.1em;
+    /* padding-block: 0.2em; */
+    /* width: max-content; */
+    border-radius: 8px;
+    
+}
+
+.video-list ul li div img{
+    width: 70px;
+    justify-self: start;
+    align-self: center;
+}
+.video-list ul li div h2{
+    font-size: 0.7em;
+    width: 200px;
+    text-wrap: wrap;
+    padding:0;
+
+}
+
+.video-list ul li div:hover {
+    background-color: lightgray;
+}

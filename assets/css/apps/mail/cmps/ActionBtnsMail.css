@@ -1,0 +1,62 @@
+.mail-action-btn {
+    display: flex;
+    justify-content: end;
+    opacity: 1;
+    transition: 500ms;
+}
+
+.mail-action-btn .action-icon {
+    display: grid;
+    position: relative;
+    place-items: center;
+    height: 35px; 
+    width: 35px;
+    /* color: #595959; */
+    
+}
+
+.mail-action-btn .action-icon img {
+    width: 65%;
+    /* color: #595959; */
+}
+
+.action-name {
+    opacity: 0;
+    position: absolute;
+    bottom: -25px;
+    /* translate: -25%; */
+    width: max-content;
+    background-color: #595959;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 12px;
+    transition-delay: 500ms;
+    transition: 500ms;
+    display: grid;
+    align-items: center;
+    z-index: 1;
+}
+
+.action-icon:hover .action-name {
+    opacity: 1;
+}
+
+.action-icon:not(.select):hover {
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

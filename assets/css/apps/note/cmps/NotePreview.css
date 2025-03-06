@@ -1,0 +1,73 @@
+.note-preview {
+    place-self: center;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    padding: 12px 16px;
+    margin-block-start: 0.5em;
+    
+    display: grid;
+    height: max-content;
+    
+    font-size: 18px;
+   
+}
+
+.note-preview:hover {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    cursor: pointer;
+}
+
+
+.note-preview  h2 {
+    height: 38px;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.note-preview p{
+    /* width: 200px; */
+    
+    
+    text-wrap:balance;
+    font-size: 0.8em;
+    font-style: unset;
+    font-weight: lighter;
+}
+
+.note-preview .action-icons .action-icon:not(.select) {
+    opacity: 0;
+}
+
+.note-preview:hover .note-pin{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.note-preview:hover .action-icons .action-icon{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.note-preview .action-icons .drawing, .note-preview .action-icons .list {
+    display:none;
+}
+
+.action-icon.select {
+    opacity:0;
+}
+
+.action-icon.select.clicked {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+.trash-note-index .trash-index-main  {
+   display: grid;
+   grid-template-columns: min-content 1fr;
+}
+
+
+
+

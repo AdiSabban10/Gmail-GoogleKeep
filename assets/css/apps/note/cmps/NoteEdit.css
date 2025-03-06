@@ -1,0 +1,64 @@
+.note-edit .screen {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(207, 203, 203, 0.654);
+    z-index: 1;
+}
+
+.note-edit article {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: grid;
+    padding: 1em;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.548);
+    border-radius: 8px;
+    z-index: 2;
+    width: 300px;
+    
+    font: Robotica;
+    
+}
+
+.note-edit .note-form iframe {
+    width: calc(300px - 2em);
+
+}
+
+
+.note-edit .note-form form input {
+    border: none;
+    width: 200px;
+}
+
+.note-edit .note-form button {
+    bottom: 7px;
+    right: 10px;
+}
+
+.note-edit .action-icons-new-note{
+    width: 220px;
+    position: absolute;
+    bottom: -0;
+    left: 0;
+}
+
+.note-edit .trash, .note-edit .select, .note-edit .duplicate {
+    display:none;
+}
+
+.note-edit .action-icons {
+    width: 170px;
+}
+
+.note-edit .action-icons .drawing, .note-edit .action-icons .list {
+    display:none;
+}
+
+.note-edit p{
+    font-size: 0.7em;
+    display: grid;
+    width: max-content;
+    justify-self: end;
+}

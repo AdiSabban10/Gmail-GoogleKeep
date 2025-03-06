@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-block-start: var(--scroll-padding-start, 1.5em);
+}
+
+body {
+    margin: 0;
+   
+    /* margin-block-start: 0.5em; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p, img {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Dont stretch my Media */
+img,
+embed,
+video,
+object {
+	display: block;
+	max-width: 100%;
+}
+
+.debug {
+    outline: 1px solid red;
+}
+
+button:hover{
+    cursor: pointer;
+}

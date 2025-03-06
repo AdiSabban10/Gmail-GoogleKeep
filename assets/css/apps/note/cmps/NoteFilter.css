@@ -1,0 +1,35 @@
+.note-filter {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 40px 1fr;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.548);
+    color: gray;
+    font-family: Roboto;
+    font-size: 13px;
+    border-radius: 8px;
+    height: 40px;
+    max-width: 400px;
+    align-items: center;
+    font-size: 13px;
+    column-gap: 1em;
+}
+
+.note-filter img {
+    margin-inline-start: 20px;
+    
+   
+}
+
+.note-filter span {
+    justify-self: start;
+    width: 350px;
+    
+}
+
+.note-filter input {
+    border: none;
+}
+
+.note-filter input:focus{
+    outline: none;
+}

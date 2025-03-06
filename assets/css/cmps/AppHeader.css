@@ -1,0 +1,69 @@
+.app-header {
+    position: relative;
+}
+
+.app-header div{
+    position: absolute;
+   
+    z-index: 3;
+    /* margin-inline-start: 0.2em; */
+    margin-inline-start: 0.5em;
+    margin-block-start: 0.5em;
+}
+
+.app-header .main-nav-icon.clicked {
+    background-color: var(--coral);
+    border-radius: 50%;
+
+}
+.app-header .main-nav-icon.clicked span {
+    opacity:0;
+
+}
+
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    translate: 75% 40%;
+    display: grid;
+    background-color: white;
+    border: 5px solid var(--fog);
+    border-radius: 20px;
+    padding: 1em;
+    
+    z-index:2;
+    grid-template-columns: repeat(2, 50px);
+}
+
+nav a {
+    /* margin: .5em; */
+    font-size: 0.5;
+    display: grid;
+    place-items: center;
+    padding: 0.3em;
+    column-gap: 0.1em;
+}
+
+nav a:hover{
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 8px;
+}
+
+nav a:active {
+    color: purple;
+}
+
+nav a.active {
+    color: var(--coral);
+    font-weight: bold;
+    /* text-decoration: overline; */
+}
+
+.app-header img {
+    display: grid;
+    place-content: center;
+    
+}

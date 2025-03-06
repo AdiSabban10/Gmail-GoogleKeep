@@ -1,0 +1,64 @@
+/* MOBILE ONLY */
+@media (max-width: 920px){
+    .about{
+       display: block;
+       height: 100%;
+       padding: 2em; 
+    }
+    
+    .about .gif {
+        margin: 1em auto;
+    }
+
+    .about .logo {
+        bottom: 230px;
+    }
+
+    .about ul {
+        padding-inline: 2em;
+    }
+
+    .about h2, .about h1 {
+        text-align: center;
+    }
+
+    /* .app-header div{
+        
+        left: 0.3em;
+        top: 0.5em;
+        
+    }
+
+    nav {
+       
+        top: 0;
+        right: 0;
+        translate: 80% 40%;
+        
+    } */
+   
+    
+    
+    
+}
+
+/* SMALL */
+
+@media (min-width: 640px){
+    .app-header div{
+       margin: 0;
+        right: 0.5em;
+        top: 0.5em;
+        
+    }
+
+    nav {
+       
+        top: 0;
+        right: 0;
+        translate: 0 40%;
+        
+    }
+
+
+}

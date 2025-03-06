@@ -1,0 +1,14 @@
+.mail-header {
+    display: grid;
+    grid-template-columns: 50px 100px 1fr;
+    width: 400px;
+    margin-inline-start: 160px;
+    align-items: center;
+    border-radius: 5px;
+    /* padding: 10px; */
+}
+
+.mail-header img {
+    height: 30px;
+    margin-inline-end: 20px;
+}

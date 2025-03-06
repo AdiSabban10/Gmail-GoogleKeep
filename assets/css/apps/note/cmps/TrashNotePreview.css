@@ -1,0 +1,14 @@
+ .trash-preview-buttons {
+    display: grid;
+    grid-auto-flow: column;
+    opacity: 0;
+}
+
+.trash-preview-buttons .action-icon.restore{
+    justify-self: end;
+    
+}
+
+.trash-note-preview:hover .trash-preview-buttons {
+    opacity: 1;
+}

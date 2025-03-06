@@ -1,0 +1,23 @@
+.note-pin {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 35px;
+    width: 35px;
+    display: grid;
+    place-self: center;
+
+}
+
+.note-preview .note-pin {
+    opacity: 0;
+}
+
+.note-pin.pinned{
+    opacity: 1;
+    background-color: var(--blossom);
+    border-radius: 50%;
+}
+
+
+

@@ -1,0 +1,40 @@
+.note-preview .note-todos {
+    display: block;
+   
+    
+}
+
+.note-preview .to-do-list {
+    display: grid;
+}
+
+.note-preview .to-do-list li {
+    justify-self: start;
+    font-size: 0.8em;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 20px 2fr 1fr;
+    column-gap: 1em;
+}
+
+.note-todos .to-do-list li span.done-at{
+    font-size: 0.7em;
+}
+
+.note-todos .check-mark{
+    
+    font-size: 0.5em;
+    font-weight: 100;
+    place-self: end;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 0.2em;
+    width: max-content;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 0.2em;
+    margin-inline-end: 1.5em;
+    
+    
+    
+}

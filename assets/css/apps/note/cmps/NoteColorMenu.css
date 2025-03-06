@@ -1,0 +1,30 @@
+.note-color-menu {
+    position: absolute;
+    z-index: 3;
+}
+
+.note-color-menu .colors {
+  
+    display: grid;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 0.1em;
+    grid-auto-flow: column;
+    column-gap: 0.1em;
+    translate: 0 120%;
+    
+    
+}
+
+.note-color-menu .colors div {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+   
+}
+
+.note-color-menu .colors div:hover{
+   border-color: black;
+}

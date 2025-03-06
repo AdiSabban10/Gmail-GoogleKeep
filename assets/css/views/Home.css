@@ -1,0 +1,13 @@
+.home{
+    display: grid;
+    
+    background-color: var(--chalk);
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.home img{
+   place-self: center;
+    border-radius: 20px;
+}
