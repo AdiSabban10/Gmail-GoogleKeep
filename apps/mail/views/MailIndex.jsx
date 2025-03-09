@@ -3,8 +3,6 @@ const { useSearchParams, useParams, useNavigate, Outlet } = ReactRouterDOM
 
 import { mailService } from '../services/mail.service.js'
 
-import { MailList } from '../cmps/MailList.jsx'
-import { MailDetails } from '../cmps/MailDetails.jsx'
 import { MailSideMenu } from '../cmps/MailSideMenu.jsx'
 import { MailFilter } from '../cmps/MailFilter.jsx'
 import { MailCompose } from '../cmps/MailCompose.jsx'
@@ -21,11 +19,8 @@ export function MailIndex() {
     const [ newMailFromSearchParams, setNewMailFromSearchParams ] = useState(mailService.getMailFromSearchParams(searchParams))
     const [ newMail, setNewMail ] = useState(mailService.getEmptyMail())
     const [showCompose, setShowCompose] = useState(false)
-    const [selectedMail, setSelectedMail] = useState(null)
     const [mail, setMail] = useState(null)
-    // const [isSideMenuOpen, setSideMenuOpen] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
-    const searchParamsRef = useRef(searchParams)
     
     
     useEffect(() => {
@@ -46,21 +41,13 @@ export function MailIndex() {
         if (showCompose) {
             setSearchParams(newMailFromSearchParams)
             setNewMail({...newMail, ...newMailFromSearchParams})
-            console.log('newMail:', newMail)
         }
     }, [newMailFromSearchParams])
 
-    // useEffect(() => {
-    //     searchParamsRef.current = searchParams
-    //     if (searchParams.has('compose')) {
-    //         setShowCompose(true)
-    //     } else {
-    //         setShowCompose(false)
-    //     }
-    // }, [])
-
+    
 
      useEffect(() => {
+        if (!params.mailId) return
         setIsLoading(true)
         mailService.get(params.mailId)
             .then(mail => {
@@ -80,7 +67,6 @@ export function MailIndex() {
 
     
     function removeMail(mailId) {
-        // setIsLoading(true)
         mailService.moveToTrash(mailId)
             .then(() => {
                 setMails(prevMails => prevMails.filter(mail => mail.id !== mailId))
@@ -90,7 +76,6 @@ export function MailIndex() {
             .catch(err => {
                 console.log('err:', err)
             })
-            // .finally(()=>setIsLoading(false))
     }
 
     function toggleReadStatus(mailId) {
@@ -137,9 +122,7 @@ export function MailIndex() {
         setSortBy(newSortBy)
     }
 
-    // function onSetNewMailFromSearchParams(newMail){
-    //     setNewMailFromSearchParams (prevMail => ({...prevMail, ...newMail}))
-    // }
+    
     function onSetNewMail(newMail){
         setNewMail(prevMail => ({...prevMail, ...newMail}))
     }
@@ -159,17 +142,8 @@ export function MailIndex() {
 
     
 
-    // function onShowCompose(isShowCompose) {
-    //     if (isShowCompose) {
-    //         setNewMail(mailService.getEmptyMail())
-    //     }
-    //     setShowCompose(isShowCompose)
-    // }
-
     function onShowCompose(isShowCompose) {
-        console.log('showCompose:', showCompose)
         if (isShowCompose) {
-            // setNewMail(mailService.getEmptyMail())
             searchParams.set('compose', 'new')
             setSearchParams(searchParams)
         } else {
@@ -187,40 +161,9 @@ export function MailIndex() {
         setShowCompose(false)
     }
     
-    function selectMail(mailId) {
-        const mail = mails.find(mail => mail.id === mailId)
-        if (mail) {
-            setSelectedMail(mail)
-            if (!mail.isRead) {
-                toggleReadStatus(mailId)
-            }
-        } else {
-            navigate('/mail');
-        }
-    }
 
-    // function toggleSideMenu(){
-    //     setSideMenuOpen(prevIsSideMenuOpen => !prevIsSideMenuOpen)
-    // }
-
-    // function updateSearchParams(newParams) {
-    //     const updatedSearchParams = new URLSearchParams(searchParamsRef.current)
-    //     Object.keys(newParams).forEach(key => {
-    //         if (newParams[key] !== null) {
-    //             updatedSearchParams.set(key, newParams[key])
-    //         } else {
-    //             updatedSearchParams.delete(key)
-    //         }
-    //     })
-    //     setSearchParams(updatedSearchParams)
-    // }
-
-    if (isLoading) return <div>Loading...</div>
-
-   
-    if (!mails) return <div>Loading...</div>
-
-    // if (isLoading) return <div className="loader"></div>
+    if (isLoading && !mails) return <div>Loading...</div>
+    
     return (
         <section className="mail-index">
             <header className="mail-header">
@@ -242,7 +185,6 @@ export function MailIndex() {
             </main>
             {showCompose && <MailCompose newMail={newMail} onNewMail={onSetNewMail} onSaveMailCompose={onSaveMailCompose} 
                 onCloseCompose={closeCompose} />}
-                {/* onCloseCompose={closeCompose} updateSearchParams={updateSearchParams} />} */}
         </section>
     )
 }

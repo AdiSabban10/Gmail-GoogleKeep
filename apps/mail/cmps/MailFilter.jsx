@@ -75,7 +75,6 @@ export function MailFilter({ filterBy, onFilter, onSort }) {
                             <option value="title">Title</option>
                         </select>
                     </div>
-                    {/* <button onClick={toggleSearchOptions}>Search</button> */}
                     <button onClick={toggleSearchOptions}>X</button>
                 </div>
             )}

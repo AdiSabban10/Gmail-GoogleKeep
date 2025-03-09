@@ -19,63 +19,21 @@ export const mailService = {
     countUnreadInboxMails,
     moveToTrash,
     getFilterFromSearchParams,
-    getMailFromSearchParams, 
-    // getNoteFromSearchParams, 
+    getMailFromSearchParams,
+    getNoteFromSearchParams, 
 }
 
-// function query(filterBy) {
-//     return storageService.query(MAIL_KEY)
-//         .then(mails => {
-//             if (criteria.status) {
-//                 if (criteria.status === 'inbox') {
-//                     mails = mails.filter(mail => mail.to === loggedinUser.email && !mail.removedAt)
-//                 } 
-//                 if (criteria.status === 'sent') {
-//                     mails = mails.filter(mail => mail.from === loggedinUser.email && !mail.removedAt)
-//                 } 
-//                 if (criteria.status === 'trash') {
-//                     mails = mails.filter(mail => mail.removedAt)
-//                 }
-//                 if (criteria.status === 'starred') {
-//                     mails = mails.filter(mail => mail.isStarred)
-//                 }
-//                 if (criteria.status === 'drafts') {
-//                     mails = []
-//                 }
-//             }
-
-//             if (criteria.txt) {
-//                 const regExp = new RegExp(criteria.txt, 'i')
-//                 mails = mails.filter(mail => regExp.test(mail.subject) || regExp.test(mail.body))
-//             }
-//             if (criteria.isRead !== undefined && criteria.isRead !== '') {
-//                 mails = mails.filter(mail => mail.isRead === (criteria.isRead === 'true'))
-//             }
-            
-
-//             if (criteria.sortBy === 'title') {
-//                 mails.sort((a, b) => a.subject.localeCompare(b.subject))
-//             } else if (criteria.status === 'trash'){
-//                 mails.sort((a, b) => b.removedAt - a.removedAt)
-//             } else {
-//                 mails.sort((a, b) => b.sentAt - a.sentAt)
-//             }
-//             // console.log('mails', mails);
-//             return mails
-//         })
-// }
 
 function query(filterBy) {
-    // console.log('filterBy from Servic', filterBy)
     return storageService.query(MAIL_KEY)
         .then(mails => {
             if (filterBy.status) {
                 if (filterBy.status === 'inbox') {
                     mails = mails.filter(mail => mail.to === loggedinUser.email && !mail.removedAt)
-                } 
+                }
                 if (filterBy.status === 'sent') {
                     mails = mails.filter(mail => mail.from === loggedinUser.email && !mail.removedAt)
-                } 
+                }
                 if (filterBy.status === 'trash') {
                     mails = mails.filter(mail => mail.removedAt)
                 }
@@ -94,16 +52,15 @@ function query(filterBy) {
             if (filterBy.isRead !== undefined && filterBy.isRead !== '') {
                 mails = mails.filter(mail => mail.isRead === (filterBy.isRead === 'true'))
             }
-            
+
 
             if (filterBy.sortBy === 'title') {
                 mails.sort((a, b) => a.subject.localeCompare(b.subject))
-            } else if (filterBy.status === 'trash'){
+            } else if (filterBy.status === 'trash') {
                 mails.sort((a, b) => b.removedAt - a.removedAt)
             } else {
                 mails.sort((a, b) => b.sentAt - a.sentAt)
             }
-            // console.log('mails', mails);
             return mails
         })
 }
@@ -138,14 +95,14 @@ function getEmptyMail() {
         body: '',
         isRead: true,
         isStarred: false,
-        sentAt : Date.now(),
-        removedAt : null,
+        sentAt: Date.now(),
+        removedAt: null,
         from: loggedinUser.email,
         to: '',
     }
 
     return mail
-} 
+}
 
 function getFilterFromSearchParams(searchParams) {
     return {
@@ -162,16 +119,16 @@ function getMailFromSearchParams(searchParams) {
 }
 
 
-// function getNoteFromSearchParams(searchParams) {
-//     return {
-//         title: searchParams.get('title') || '',
-//         txt: searchParams.get('txt') || '',
-//     }
-// }
+function getNoteFromSearchParams(searchParams) {
+    return {
+        title: searchParams.get('title') || '',
+        txt: searchParams.get('txt') || '',
+    }
+}
 
 function _createMails() {
     let mails = utilService.loadFromStorage(MAIL_KEY)
-    
+
     if (!mails || !mails.length) {
         mails = []
         for (let i = 0; i < 20; i++) {
@@ -181,8 +138,8 @@ function _createMails() {
                 body: utilService.makeLorem(20),
                 isRead: Math.random() > 0.7,
                 isStarred: Math.random() > 0.7,
-                sentAt : 1551133930594,
-                removedAt : null,
+                sentAt: 1551133930594,
+                removedAt: null,
                 from: 'momo@momo.com',
                 to: loggedinUser.email
             }

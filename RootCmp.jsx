@@ -6,7 +6,6 @@ import { About } from "./views/About.jsx"
 import { Home } from "./views/Home.jsx"
 
 import { UserMsg } from "./cmps/UserMsg.jsx"
-import { eventBusService } from "./services/event-bus.service.js"
 
 import { MailIndex } from "./apps/mail/views/MailIndex.jsx"
 import { MailList } from "./apps/mail/cmps/MailList.jsx"

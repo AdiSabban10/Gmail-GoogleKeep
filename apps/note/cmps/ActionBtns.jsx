@@ -3,6 +3,7 @@ import { NoteImgAdd } from "./NoteImgAdd.jsx"
 import { NoteVideoAdd } from "./NoteVideoAdd.jsx"
 
 const { useState } = React
+const {  useNavigate } = ReactRouterDOM 
 
 export function ActionBtns( {note, onRemove, onSetNoteColor, onDuplicate, onLoadImgOrVid, onAddTodos, onSelect} ){
 
@@ -10,6 +11,7 @@ export function ActionBtns( {note, onRemove, onSetNoteColor, onDuplicate, onLoad
     const [ addImg, setAddImg ] = useState(false)
     const [ addVideo, setAddVideo ] = useState(false)
     const [ isSelected, setIsSelected] = useState('')
+    const navigate = useNavigate() 
 
     
     function onDuplicateNote(ev){
@@ -62,7 +64,14 @@ export function ActionBtns( {note, onRemove, onSetNoteColor, onDuplicate, onLoad
     }
 
     
-
+    function sendAsMail(){
+        // const mailContent = {
+        //     subject: note.info.title,
+        //     body: note.info.txt,
+        // }
+        // navigate(`/mail/compose?subject=${mailContent.subject}&body=${mailContent.body}`)
+        navigate(`/mail/compose?subject=${note.info.title}&body=${note.info.txt}`)
+    }
     
     
     return <section className ="action-icons">
@@ -88,6 +97,7 @@ export function ActionBtns( {note, onRemove, onSetNoteColor, onDuplicate, onLoad
                     </div> */}
                     
                     <div className="action-icon email">
+                    {/* <div onClick={sendAsMail} className="action-icon email" >  */}
                         <img height="24" width="24" src="assets\img\email.svg" alt="" />
                         <span className="action-name">Send as mail</span>
                     </div>

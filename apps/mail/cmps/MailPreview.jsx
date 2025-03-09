@@ -2,7 +2,6 @@ import { utilService } from '../../../services/util.service.js'
 
 export function MailPreview({ mail, toggleStarredStatus }) {
     
-
     const sentDate = new Date(mail.sentAt)
     const currentDate = new Date()
     const day = sentDate.getDate()

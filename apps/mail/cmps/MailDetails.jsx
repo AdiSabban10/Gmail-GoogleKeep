@@ -1,17 +1,12 @@
-const { useState, useEffect } = React
-const { useOutletContext, useParams, useNavigate, Link } = ReactRouterDOM
+const { useOutletContext, useParams, Link } = ReactRouterDOM
 
 import { utilService } from "../../../services/util.service.js"
 import { ActionBtnsMail } from "./ActionBtnsMail.jsx"
 
 export function MailDetails() {
     const { mail, removeMail, toggleReadStatus, toggleStarredStatus } = useOutletContext()
-    // const [isLoading, setIsLoading] = useState(true)
-    
     const { status } = useParams()
-    // const navigate = useNavigate()
-
-
+   
     function getTime(mail) {
         const sentDate = new Date(mail.sentAt)
         const day = sentDate.getDate()
@@ -30,7 +25,6 @@ export function MailDetails() {
         ev.stopPropagation()
         toggleStarredStatus(mailId) 
     }
-    // if (isLoading) return <div>Loading...</div>
 
     if (!mail) return <div>Mail not found...</div>
 

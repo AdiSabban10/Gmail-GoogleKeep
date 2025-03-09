@@ -11,20 +11,17 @@
     place-items: center;
     height: 35px; 
     width: 35px;
-    /* color: #595959; */
     
 }
 
 .mail-action-btn .action-icon img {
     width: 65%;
-    /* color: #595959; */
 }
 
 .action-name {
     opacity: 0;
     position: absolute;
     bottom: -25px;
-    /* translate: -25%; */
     width: max-content;
     background-color: #595959;
     color: white;

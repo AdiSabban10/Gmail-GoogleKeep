@@ -1,4 +1,4 @@
-import { NoteImg } from "./NoteImg"
+import { NoteImg } from "./NoteImg.jsx"
 import { NoteTodos } from "./NoteToDos.jsx"
 import { NoteTxt } from "./NoteTxt.jsx"
 import { NoteVideo } from "./NoteVideo.jsx"

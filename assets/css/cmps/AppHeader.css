@@ -6,7 +6,6 @@
     position: absolute;
    
     z-index: 3;
-    /* margin-inline-start: 0.2em; */
     margin-inline-start: 0.5em;
     margin-block-start: 0.5em;
 }
@@ -38,7 +37,6 @@ nav {
 }
 
 nav a {
-    /* margin: .5em; */
     font-size: 0.5;
     display: grid;
     place-items: center;
@@ -59,7 +57,6 @@ nav a:active {
 nav a.active {
     color: var(--coral);
     font-weight: bold;
-    /* text-decoration: overline; */
 }
 
 .app-header img {

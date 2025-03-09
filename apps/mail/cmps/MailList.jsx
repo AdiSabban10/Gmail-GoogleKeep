@@ -3,8 +3,6 @@ const { Link, useOutletContext, useParams } = ReactRouterDOM
 import { MailPreview } from './MailPreview.jsx'
 import { ActionBtnsMail } from './ActionBtnsMail.jsx'
 
-
-// export function MailList({ mails, removeMail, toggleReadStatus, toggleStarredStatus, sortBy }) {
 export function MailList() {
     const { status } = useParams()
     const { mails, removeMail, toggleReadStatus, toggleStarredStatus } = useOutletContext()

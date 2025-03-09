@@ -1,29 +1,13 @@
-const { useState, useEffect, useRef } = React
-const {  useNavigate,useParams, useSearchParams } = ReactRouterDOM
+const { useState, useEffect } = React
+const {  useSearchParams } = ReactRouterDOM
 
 export function MailCompose({ newMail, onNewMail, onSaveMailCompose, onCloseCompose }){
     const [newMailToEdit, setNewMailToEdit] = useState({...newMail})
-    const navigate = useNavigate()
-
     const [searchParams, setSearchParams] = useSearchParams()
-    // const [noteMailContent, setNoteMailContent] = useState({ subject: '', body: '' })
-    
-    // const params = useParams()
     
     useEffect(() => {
         onNewMail({ ...newMailToEdit })
-        console.log('newMailToEdit:', newMailToEdit)
     }, [newMailToEdit])
-    
-    // useEffect(() => {
-    //     const compose = searchParams.get('compose')
-    //     const subject = searchParams.get('subject') || ''
-    //     const body = searchParams.get('body') || ''
-        
-    //     if (compose) {
-    //         setNewMailToEdit(prevMail => ({ ...prevMail, subject, body }))
-    //     }
-    // }, [searchParams])
     
 
     useEffect(() => {
@@ -53,33 +37,6 @@ export function MailCompose({ newMail, onNewMail, onSaveMailCompose, onCloseComp
     }
     
 
-    // if (!searchParams.get('compose')) {
-    //     return null
-    // }
-    // if (!newMailToEdit.compose) {
-    //     return null;
-    // }
-
-    function sendNote(){
-        // const noteContent = {
-            //     title: newMailToEdit.subject,
-            //     txt: newMailToEdit.body,
-            // }
-            // console.log('noteContent:', noteContent)
-            
-            // navigate(`/note/add?title=${newMailToEdit.subject}&body=${newMailToEdit.body}`)
-            
-            // Link form for sending a note as an email
-    
-        navigate(`/mail/inbox?compose=new&subject=ADISABBAN&body=SSSSSSSSSSS`)
-    
-        // navigate(`/mail/inbox?compose=new&subject=${note.info.title}&body=${note.info.txt}`)
-        
-        
-        // setNoteMailContent({subject: '', body: ''})
-        // onCloseCompose() 
-    }
-    
 
     return (
         <section className="mail-compose">
@@ -105,7 +62,6 @@ export function MailCompose({ newMail, onNewMail, onSaveMailCompose, onCloseComp
                         ></textarea>
                     <div className="btn-send-compose"> 
                         <button type="submit" className="btn-send">Send</button>
-                        {/* <button type="button" className="btn-send" onClick={sendNote}>Send as a note</button> */}
                     </div>
                 </div>
             </form>

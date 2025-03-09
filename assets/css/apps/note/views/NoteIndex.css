@@ -34,7 +34,6 @@
 
 .note-index main .side-menu {
     grid-area: side-menu;
-    /* max-width: 250px; */
 }
 
 .note-index main .add-note {
