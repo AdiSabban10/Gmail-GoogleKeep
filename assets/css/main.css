@@ -15,8 +15,9 @@
 @import './cmps/AppHeader.css';
 
 /* Views */
-@import './views/home.css';
-@import './views/about.css';
+@import './views/About.css';
+@import './views/Home.css';
+
 @import './setup/mq.css';
 
 /* Keeper */
